@@ -19,6 +19,12 @@ echo "[*] welcome to Redcrack"
 sleep 1
 echo "[*] checking depenencies"
 sleep 1
+if [ -d redcrack ]; then
+	echo "[*] dir ready"
+else
+	echo "[*] readying dir"
+	mkdir ~/redcrack
+fi
 command -v john >/dev/null || sudo apt install john
 command -v hydra >/dev/null || sudo apt install hydra
 command -v nuclei >/dev/null || sudo apt install nuclei
